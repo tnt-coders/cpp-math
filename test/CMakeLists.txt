@@ -1,8 +1,10 @@
 include(Catch)
 
 add_executable(${PROJECT_NAME}_test
-    # TODO: <files>
     main.cpp
+    comparison_test.cpp
+    math_test.cpp
+    vector_test.cpp
 )
 
 target_link_libraries(${PROJECT_NAME}_test

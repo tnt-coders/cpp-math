@@ -2,7 +2,7 @@ from conans import ConanFile, CMake, tools
 
 class CppMath(ConanFile):
     author = "TNT Coders <tnt-coders@googlegroups.com>"
-    build_requires = "catch2/3.0.0@tnt-coders/testing"
+    build_requires = "catch2/3.0.0@tnt-coders/stable"
     default_options = {"shared": False}
     description = "C++ library containing common math utility functions"
     exports_sources = "CMakeLists.txt", "docs/*", "include/*", "src/*", "test/*"
@@ -13,7 +13,7 @@ class CppMath(ConanFile):
     settings = "os", "compiler", "build_type", "arch"
     topics = ("math")
     url = "https://github.com/tnt-coders/cpp-math"
-    version = "0.0.0"
+    version = "1.0.0"
 
     def configure(self):
         tools.check_min_cppstd(self, "17")
