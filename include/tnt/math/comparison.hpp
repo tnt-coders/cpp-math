@@ -14,8 +14,9 @@ This function takes two floating point numbers and compares them to see if they 
 be considered equal.
 
 For comparisons near zero the "scale" value is used to determine the order of magnitude of the data.
-A default scale of "1" is assumed, but if you are dealing with large numbers tests around zero may
-fail. To fix this, set the scale value to the same order of magnitude as the data being compared.
+A default scale of "1" is assumed, but if you are dealing with very large or very small numbers
+tests around zero may fail. To fix this, set the scale value to the same order of magnitude as the
+data being compared.
 
 For example, if the data you are processing is in the millions (on the order of magnitude of 10^6),
 then set scale value to std::pow(10, 6).
@@ -30,7 +31,7 @@ if (a == b)
     // Due to slight rounding errors "a" will most likely not be exactly equal to "b"
 }
 
-if (near(a, b))
+if (tnt::math::near(a, b))
 {
     // Code will get here
     std::cout << "a is approximately equal to b" << std::endl;

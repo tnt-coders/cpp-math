@@ -15,7 +15,7 @@ filled with data that is evenly spaced between the begin and end value.
 
 **For Example:**
 \code{.cpp}
-std::vector<double> data = linspace<double>(0, 1, 101);
+std::vector<double> data = tnt::math::linspace<double>(0, 1, 101);
 \endcode
 
 The code above will produce a vector containing 101 evenly spaced data points between 0 and 1... 0,
