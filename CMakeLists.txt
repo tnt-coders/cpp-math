@@ -5,8 +5,11 @@ project(math LANGUAGES CXX)
 
 # Get CMake modules from Git
 include(FetchContent)
-FetchContent_Declare(CMakeModules GIT_REPOSITORY https://github.com/tnt-coders/cmake-modules.git)
-FetchContent_MakeAvailable(CMakeModules)
+FetchContent_Declare(cmake-modules
+  GIT_REPOSITORY https://github.com/tnt-coders/cmake-modules.git
+  GIT_TAG main
+)
+FetchContent_MakeAvailable(cmake-modules)
 
 # Include the required modules
 include(tnt/project/Project)
@@ -19,14 +22,13 @@ tnt_project_New(${PROJECT_NAME}
 
 # Find and install dependencies
 tnt_project_ConanInstall(${PROJECT_NAME})
-include(${CMAKE_BINARY_DIR}/conan_paths.cmake)
+include(${CMAKE_CURRENT_BINARY_DIR}/conan_paths.cmake)
 find_package(Catch2 REQUIRED)
 
 # Enable testing for the project
 # Note: must be in top level CMakeLists.txt
 enable_testing()
 
-add_subdirectory(docs)
 add_subdirectory(src)
 add_subdirectory(test)
 
