@@ -1,13 +1,6 @@
-# Overview
+# cpp-math
 
-cpp-math is an open source, cross platform, C++ library containing common
-math utility functions.
-
-## Documentation
-
-[![Documentation](https://codedocs.xyz/tnt-coders/cpp-math.svg)](https://codedocs.xyz/tnt-coders/cpp-math/)
-
-Documentation can be found at <https://codedocs.xyz/tnt-coders/cpp-math/>.
+cpp-math is an open source, cross platform, C++ library containing common math utility functions.
 
 # Build Instructions
 
@@ -29,6 +22,5 @@ To test the project, run CTest from the build directory.
 
 ## Dependencies
 
-This project requires the Conan package manager to automatically manage all of
-its dependencies. To install Conan see:
-https://docs.conan.io/en/latest/installation.html
+This project requires the Conan package manager to automatically manage all of its dependencies. To
+install Conan see: https://docs.conan.io/en/latest/installation.html
