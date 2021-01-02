@@ -13,7 +13,6 @@ class CppMath(ConanFile):
     settings = "os", "compiler", "build_type", "arch"
     topics = ("math")
     url = "https://github.com/tnt-coders/cpp-math"
-    version = "1.0.0"
 
     def configure(self):
         tools.check_min_cppstd(self, "17")
