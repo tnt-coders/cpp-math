@@ -29,7 +29,7 @@ The code above will produce a vector containing 101 evenly spaced data points be
 template <typename T>
 std::vector<T> linspace(T begin, T end, size_t count)
 {
-    struct Generator
+    struct generator
     {
         Generator(T begin, T step)
             : m_next(begin)
@@ -51,7 +51,7 @@ std::vector<T> linspace(T begin, T end, size_t count)
     T step = (end - begin) / static_cast<T>(count - 1);
 
     std::vector<T> result(count);
-    std::generate(result.begin(), result.end(), Generator(begin, step));
+    std::generate(result.begin(), result.end(), generator(begin, step));
 
     return result;
 }
