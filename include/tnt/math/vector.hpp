@@ -31,7 +31,7 @@ std::vector<T> linspace(T begin, T end, size_t count)
 {
     struct generator
     {
-        Generator(T begin, T step)
+        generator(T begin, T step)
             : m_next(begin)
             , m_step(step)
         {}
