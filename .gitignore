@@ -1,7 +1,7 @@
 # Build artifacts
 build
 
-# Clion auto-generated files
+# CLion auto-generated files
 .idea
 cmake-build-*
 
